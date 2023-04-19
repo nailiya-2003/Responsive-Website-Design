@@ -11,7 +11,8 @@
 <body>
     <header>
         <a href="#" class="brand">Travel</a>
-        <div class="navigation">
+        <div class="menu-btn active"></div>
+        <div class="navigation active">
             <div class="navigation-items">
                 <a href="#">Home</a>
                 <a href="#">About</a>
@@ -22,6 +23,7 @@
         </div>
     </header>
     <section class="home">
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681914782.59382.mp4" autoplay muted loop></video>
         <div class="content">
             <h1>Wondeful. <br><span>Island</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
@@ -32,6 +34,33 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
     </section>
+    <script type="text/javascript">
+        const menubtn = document.querySelector(".menu-btn") 
+        const navigation= document.querySelector(".navigation") 
+        menubtn.addEventListener("click", () => {
+            menubtn.classList.toggle('active')
+            navigation.classList.toggle('active')
+        })
+        const btns = document.querySelectorAll('.nav-btn')
+        var sliderNav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove('.active')
+            }) 
+            btns[manual].classList.add('.active')
+        }
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i)
+            })
+        })
+    </script> 
 </body>
 </html>
