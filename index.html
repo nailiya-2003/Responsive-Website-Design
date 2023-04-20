@@ -23,7 +23,32 @@
         </div>
     </header>
     <section class="home">
-        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681914782.59382.mp4" autoplay muted loop></video>
+        <video class="video-slide active" src="videos&images/pinterestdownloader.com-1681914782.59382.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681912368.56035.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681913897.971801.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681913610.818616.mp4"  autoplay muted loop></video>
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681914740.687181.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="videos&images/pinterestdownloader.com-1681913321.93744.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Wonderful <br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Wonderful <br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Wonderful <br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Wonderful <br><span>Island</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
+            <a href="#">Read More</a>
+        </div>
         <div class="content">
             <h1>Wonderful <br><span>Island</span></h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi iste sequi aut praesentium voluptate rem. Ex odio eius illum, sequi maiores cumque esse facilis libero quis suscipit eveniet deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore numquam, enim perspiciatis maxime debitis fugit accusantium vero. Laudantium, repudiandae veritatis? Consectetur dolores veniam, laudantium quia doloremque aut magni odio eaque!Lorem</p>
@@ -45,16 +70,27 @@
     <script type="text/javascript">
         const menubtn = document.querySelector(".menu-btn") 
         const navigation= document.querySelector(".navigation") 
+       
         menubtn.addEventListener("click", () => {
             menubtn.classList.toggle('active')
             navigation.classList.toggle('active')
         })
         const btns = document.querySelectorAll('.nav-btn')
+        const slides = document.querySelectorAll(".video-slide") 
+        const content = document.querySelectorAll(".content") 
         var sliderNav = function (manual) {
             btns.forEach((btn) => {
-                btn.classList.remove('.active')
+                btn.classList.remove('active')
             }) 
-            btns[manual].classList.add('.active')
+            slides.forEach((slide) => {
+                slide.classList.remove('active')
+            }) 
+            contents.forEach((content) => {
+                content.classList.remove('active')
+            }) 
+            btns[manual].classList.add('active')
+            slides[manual].classList.add('active')
+            contents[manual].classList.add('active')
         }
         btns.forEach((btn, i) => {
             btn.addEventListener('click', () => {

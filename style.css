@@ -151,6 +151,22 @@ section.home::before {
 .slider-navigation .nav-btn:hover {
     transform: scale(1.2);
 }
+.video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 00% 50%);
+}
+.video-slide.active {
+    clip-path: circle(150% at 0% 50%);
+    transition: 0.3s ease;
+    transition-property: clip-path;
+}
+.home .content {
+    display: none;
+}
+.home .content.active {
+    display: block;
+}
 @media(max-width:1040px) {
     header {
         padding: 12px 20px;
