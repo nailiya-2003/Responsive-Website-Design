@@ -154,7 +154,7 @@ section.home::before {
 .video-slide {
     position: absolute;
     width: 100%;
-    clip-path: circle(0% at 00% 50%);
+    clip-path: circle(0% at 0 50%);
 }
 .video-slide.active {
     clip-path: circle(150% at 0% 50%);

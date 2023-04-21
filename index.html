@@ -68,33 +68,43 @@
         </div>
     </section>
     <script type="text/javascript">
-        const menubtn = document.querySelector(".menu-btn") 
-        const navigation= document.querySelector(".navigation") 
+        const menubtn = document.querySelector(".menu-btn");
+        const navigation= document.querySelector(".navigation");
        
         menubtn.addEventListener("click", () => {
-            menubtn.classList.toggle('active')
-            navigation.classList.toggle('active')
+            menubtn.classList.toggle('active');
+            navigation.classList.toggle('active');
         })
-        const btns = document.querySelectorAll('.nav-btn')
-        const slides = document.querySelectorAll(".video-slide") 
-        const content = document.querySelectorAll(".content") 
+        const btn = document.querySelectorAll('.nav-btn');
+        const slide = document.querySelectorAll(".video-slide") ;
+        const content = document.querySelectorAll(".content");
         var sliderNav = function (manual) {
-            btns.forEach((btn) => {
-                btn.classList.remove('active')
-            }) 
-            slides.forEach((slide) => {
-                slide.classList.remove('active')
-            }) 
-            contents.forEach((content) => {
-                content.classList.remove('active')
-            }) 
-            btns[manual].classList.add('active')
-            slides[manual].classList.add('active')
-            contents[manual].classList.add('active')
+            btn.forEach((btn) => {
+                btn.classList.remove('active');
+            }); 
+            slide.forEach((slide) => {
+                slide.classList.remove('active');
+            }); 
+            content.forEach((content) => {
+                content.classList.remove('active');
+            });
+            btn[manual].classList.add('active');
+            slide[manual].classList.add('active');
+            content[manual].classList.add('active');
         }
-        btns.forEach((btn, i) => {
+        btn.forEach((btn, i) => {
             btn.addEventListener('click', () => {
-                sliderNav(i)
+                sliderNav(i);
+            })
+        })
+        slide.forEach((slide, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
+            })
+        })
+        content.forEach((content, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i);
             })
         })
     </script> 
