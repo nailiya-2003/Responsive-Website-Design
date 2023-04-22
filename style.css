@@ -167,12 +167,18 @@ section.home::before {
 .home .content.active {
     display: block;
 }
+@media (max-width:652px) {
+    section.home .content.active h1 { 
+       font-size: 2.8em;
+   }
+}
 @media(max-width:1040px) {
     header {
         padding: 12px 20px;
     }
     section {
         padding: 100px 20px;
+        min-height: 100vh;
     }
     .home .media-icons {
         right: 15px;
@@ -203,8 +209,8 @@ section.home::before {
     }
     header .navigation-items { 
         background-color: #fff;
-        width: 600px;
-        max-width: 600px;
+        width: 400px;
+        max-width: 400px;
         min-height: 300px;
         margin: 20px;
         padding: 40px;
@@ -215,7 +221,6 @@ section.home::before {
         border-radius: 5px;
         box-shadow: 0 5px 25px rgb(1 1 1/20%);
     }
-   
     .menu-btn {
         background: url('videos&images/menu.png') center center/cover no-repeat;
         background-color: #fff;
@@ -232,4 +237,8 @@ section.home::before {
         background-color: #fff;
         border-radius: 18px;
     }
+   
 }
+
+
+
